@@ -1,0 +1,26 @@
+snippet download
+	[${1:section}]
+	recipe = hexagonit.recipe.download
+	url = ${2:url}
+	strip-top-level-dir = ${3:true}
+	${0}
+
+snippet cmmi
+	[${1:section}]
+	recipe = hexagonit.recipe.cmmi
+	url = ${2:url}
+	strip-top-level-dir = true
+	${0}
+
+snippet scripts
+	[${1:section}]
+	recipe = zc.recipe.egg:script
+	interpreter = py
+	eggs = ${0}
+
+snippet test
+	[${1:section}]
+	recipe = zc.recipe.testrunner
+	relative-paths = true
+	defaults = ['--auto-color']
+	eggs = ${0}
